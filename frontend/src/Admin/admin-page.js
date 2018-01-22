@@ -2,7 +2,7 @@ import React from "react"
 
 import "./style.css"
 
-class Adminpage extends React.Component {
+export default class Adminpage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
