@@ -1,11 +1,12 @@
 import React from "react"
+import Adminpage from "pages/admin/adminpage"
 
 class App extends React.Component {
 
   render() {
     return (
       <div>
-        Find me in src/app.js!
+        <Adminpage />
       </div>
     )
   }
