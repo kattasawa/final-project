@@ -9,7 +9,7 @@ app.use(bodyParser.json())
 
 app.use(cors())
 
-mongoose.connect("mongodb://localhost/forum-api", { useMongoClient: true })
+mongoose.connect("mongodb://localhost/story-api", { useMongoClient: true })
 
 mongoose.Promise = Promise
 
@@ -21,11 +21,11 @@ const AdminInput = mongoose.model("AdminInput", {
     type: String,
     required: true
   },
-  shortText: {
+  shorttext: {
     type: String,
     required: true
   },
-  longText: {
+  longtext: {
     type: String,
     required: true
   }
