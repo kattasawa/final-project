@@ -21,11 +21,11 @@ const AdminInput = mongoose.model("AdminInput", {
     type: String,
     required: true
   },
-  shorttext: {
+  shortText: {
     type: String,
     required: true
   },
-  longtext: {
+  longText: {
     type: String,
     required: true
   }
