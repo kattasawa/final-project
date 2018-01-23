@@ -2,7 +2,7 @@ import React from "react"
 import { BrowserRouter, Route } from "react-router-dom"
 import Adminpage from "pages/admin/adminpage"
 import Storypage from "pages/story/storypage"
-import Fetchshortstory from "components/fetchshortstory"
+import Fetchshortstory from "./fetchshortstory"
 
 class App extends React.Component {
 

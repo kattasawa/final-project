@@ -9,7 +9,7 @@ app.use(bodyParser.json())
 
 app.use(cors())
 
-mongoose.connect("mongodb://localhost/story-api", { useMongoClient: true })
+mongoose.connect("mongodb://localhost/story-api")
 
 mongoose.Promise = Promise
 

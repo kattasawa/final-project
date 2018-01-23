@@ -16,6 +16,7 @@ export default class Storypage extends React.Component {
     fetch("http://localhost:8080/adminstory").then(response => {
       return response.json()
     }).then(json => {
+      console.log(json)
       this.setState({
         storiesList: json
       })

@@ -7,7 +7,7 @@ export default class Fetchshortstory extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      latestShortStory: [{}]
+      latestShortStory: {}
     }
   }
 
@@ -15,6 +15,7 @@ export default class Fetchshortstory extends React.Component {
     fetch("http://localhost:8080/adminstory/latest").then(response => {
       return response.json()
     }).then(json => {
+      console.log(json)
       this.setState({
         latestShortStory: json
       })
@@ -24,15 +25,10 @@ export default class Fetchshortstory extends React.Component {
   render() {
     return (
       <div className="shortstory-container">
-        {this.state.latestShortStory.map(shortstory => {
-          return <Shortstory
-            key={shortstory._id}
-            id={shortstory._id}
-            heading={shortstory.heading}
-            shortText={shortstory.shortText}
-            // image={shortstory.image}
-            caption={shortstory.caption} />
-        })}
+        <Shortstory
+          id={this.state.latestShortStory._id}
+          heading={this.state.latestShortStory.heading}
+            shortText={this.state.latestShortStory.shortText} />
       </div>
     )
   }
