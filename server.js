@@ -63,5 +63,35 @@ app.get("/adminstory/latest", (req, res) => {
   })
 })
 
+const ContactInput = mongoose.model("ContactInput", {
+  date: Date,
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  message: {
+    type: String,
+    required: true
+  }
+})
+
+app.post("/contactform", (req, res) => {
+  const userContact = new ContactInput(req.body)
+
+  userContact.save()
+    .then(() => { res.status(201).send({ answer: "Meddelande skickat" }) })
+    .catch(err => { res.status(400).send(err) })
+})
+
+app.get("/contactform", (req, res) => {
+  ContactInput.find().then(allContactInputs => {
+    res.json(allContactInputs)
+  })
+})
+
 app.listen(8080, () =>
   console.log("Example app listening on port 8080!"))
