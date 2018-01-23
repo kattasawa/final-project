@@ -1,6 +1,7 @@
 import React from "react"
 
 import Longstory from "components/longstory"
+import "./style.css"
 
 export default class Storypage extends React.Component {
 
@@ -30,7 +31,8 @@ export default class Storypage extends React.Component {
             id={story._id}
             heading={story.heading}
             longText={story.longText}
-            image={story.image} />
+            image={story.image}
+            caption={story.caption} />
         })}
       </div>
     )

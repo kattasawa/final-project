@@ -32,6 +32,10 @@ const AdminInput = mongoose.model("AdminInput", {
   image: {
     type: String,
     required: true
+  },
+  caption: {
+    type: String,
+    required: true
   }
 })
 
