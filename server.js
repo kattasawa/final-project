@@ -28,6 +28,10 @@ const AdminInput = mongoose.model("AdminInput", {
   longText: {
     type: String,
     required: true
+  },
+  image: {
+    type: String,
+    required: true
   }
 })
 

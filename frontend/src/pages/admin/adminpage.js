@@ -8,7 +8,8 @@ export default class Adminpage extends React.Component {
     this.state = {
       heading: "",
       shortText: "",
-      longText: ""
+      longText: "",
+      image: ""
     }
   }
 
@@ -30,6 +31,12 @@ handleLongText = event => {
   })
 }
 
+handleImage = event => {
+  this.setState({
+    image: event.target.value
+  })
+}
+
 handleSubmit = event => {
   event.preventDefault()
   fetch("http://localhost:8080/adminstory", {
@@ -43,7 +50,8 @@ handleSubmit = event => {
     this.setState({
       heading: "",
       shortText: "",
-      longText: ""
+      longText: "",
+      image: ""
     }, () => { console.log("State has been reset", response, response.status) })
   ))
 }
@@ -55,6 +63,7 @@ render() {
         <input typ="text" placeholder="Write heading here..." value={this.state.heading} onChange={this.handleHeading} />
         <input typ="text" placeholder="Write short text here..." value={this.state.shortText} onChange={this.handleShortText} />
         <input typ="text" placeholder="Write long text here..." value={this.state.longText} onChange={this.handleLongText} />
+        <input typ="text" placeholder="Put image url here" value={this.state.image} onChange={this.handleImage} />
         <button>Publish</button>
       </form>
     </div>

@@ -6,6 +6,7 @@ export default class Longstory extends React.Component {
       <div className="longstory-container">
         <h2 className="heading">{this.props.heading}</h2>
         <div className="longtext">{this.props.longText}</div>
+        <img src={this.props.image} alt="" />
       </div>
     )
   }

@@ -21,7 +21,6 @@ export default class Storypage extends React.Component {
     })
   }
 
-
   render() {
     return (
       <div className="stories-list">
@@ -30,7 +29,8 @@ export default class Storypage extends React.Component {
             key={story._id}
             id={story._id}
             heading={story.heading}
-            longText={story.longText} />
+            longText={story.longText}
+            image={story.image} />
         })}
       </div>
     )
