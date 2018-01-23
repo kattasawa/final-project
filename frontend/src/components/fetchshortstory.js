@@ -27,7 +27,7 @@ export default class Fetchshortstory extends React.Component {
       <div className="shortstory-container">
         <Shortstory
           id={this.state.latestShortStory._id}
-          image={this.state.image}
+          image={this.state.latestShortStory.image}
           heading={this.state.latestShortStory.heading}
           shortText={this.state.latestShortStory.shortText} />
       </div>
