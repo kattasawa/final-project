@@ -56,5 +56,12 @@ app.get("/adminstory", (req, res) => {
   })
 })
 
+app.get("/adminstory/latest", (req, res) => {
+  // AdminInput.findOne().sort({ created_at: 1 }).limit(1).then(latestAdminInput => {
+  AdminInput.findOne().sort({ field: "asc", _id: -1 }).limit(1).then(latestAdminInput => {
+    res.json(latestAdminInput)
+  })
+})
+
 app.listen(8080, () =>
   console.log("Example app listening on port 8080!"))
