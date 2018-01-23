@@ -9,8 +9,10 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div>
-          <Storypage />
+          {/* <Storypage /> */}
           {/* <Adminpage /> */}
+          <Route exact path="/admin" component={Adminpage} />
+          <Route exact path="/storypage" component={Storypage} />
         </div>
       </BrowserRouter>
     )
