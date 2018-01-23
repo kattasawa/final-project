@@ -2,6 +2,7 @@ import React from "react"
 import { BrowserRouter, Route } from "react-router-dom"
 import Adminpage from "pages/admin/adminpage"
 import Storypage from "pages/story/storypage"
+import Fetchshortstory from "components/fetchshortstory"
 
 class App extends React.Component {
 
@@ -11,6 +12,7 @@ class App extends React.Component {
         <div>
           {/* <Storypage /> */}
           {/* <Adminpage /> */}
+          <Fetchshortstory />
           <Route exact path="/admin" component={Adminpage} />
           <Route exact path="/storypage" component={Storypage} />
         </div>
