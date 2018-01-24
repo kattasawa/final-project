@@ -64,7 +64,10 @@ app.get("/adminstory/latest", (req, res) => {
 })
 
 const ContactInput = mongoose.model("ContactInput", {
-  date: Date,
+  date: {
+    type: Date,
+    default: Date.now
+  },
   name: {
     type: String,
     required: true

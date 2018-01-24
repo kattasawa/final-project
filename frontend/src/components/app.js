@@ -5,7 +5,27 @@ import Storypage from "pages/story/storypage"
 import Aboutpage from "pages/about/aboutpage"
 import Fetchshortstory from "./fetchshortstory"
 
+
 class App extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      fetchContact: []
+    }
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:8080/contactform").then(response => {
+      return response.json()
+    }).then(json => {
+      console.log(json)
+      this.setState({
+        fetchContact: json
+      })
+    })
+  }
+
 
   render() {
     return (
@@ -14,7 +34,12 @@ class App extends React.Component {
           {/* <Storypage /> */}
           {/* <Adminpage /> */}
           {/* <Fetchshortstory /> */}
-          <Route exact path="/admin" component={Adminpage} />
+          <Route exact path="/admin"
+                render={routeProps =>
+                  <Adminpage
+                    {...routeProps}
+                    questions={this.state.fetchContact} />
+                  } />
           <Route exact path="/story" component={Storypage} />
           <Route exact path="/about" component={Aboutpage} />
         </div>
