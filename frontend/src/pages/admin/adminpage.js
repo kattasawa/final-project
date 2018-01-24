@@ -1,4 +1,5 @@
 import React from "react"
+import Fetchcontactform from "components/fetchcontactform"
 
 import "./style.css"
 
@@ -66,15 +67,24 @@ handleSubmit = event => {
 
 render() {
   return (
-    <div className="form-container">
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" placeholder="Write heading here..." value={this.state.heading} onChange={this.handleHeading} />
-        <input type="text" placeholder="Write short text here..." value={this.state.shortText} onChange={this.handleShortText} />
-        <input type="text" placeholder="Write long text here..." value={this.state.longText} onChange={this.handleLongText} />
-        <input type="text" placeholder="Put image url here" value={this.state.image} onChange={this.handleImage} />
-        <input type="text" placeholder="Write caption here..." value={this.state.caption} onChange={this.handleCaption} />
-        <button>Publicera</button>
-      </form>
+    <div>
+      <div className="form-container">
+        <form onSubmit={this.handleSubmit}>
+          <input type="text" placeholder="Write heading here..." value={this.state.heading} onChange={this.handleHeading} />
+          <input type="text" placeholder="Write short text here..." value={this.state.shortText} onChange={this.handleShortText} />
+          <input type="text" placeholder="Write long text here..." value={this.state.longText} onChange={this.handleLongText} />
+          <input type="text" placeholder="Put image url here" value={this.state.image} onChange={this.handleImage} />
+          <input type="text" placeholder="Write caption here..." value={this.state.caption} onChange={this.handleCaption} />
+          <button>Publicera</button>
+        </form>
+      </div>
+
+      <div className="contact-admin-container">
+        <p>{this.props.date}</p>
+        <input type="text" value={this.props.name} />
+        <input type="text" value={this.props.email} />
+        <textarea type="text" value={this.props.message} />
+      </div>
     </div>
   )
 }
