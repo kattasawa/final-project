@@ -35,11 +35,11 @@ class App extends React.Component {
           {/* <Adminpage /> */}
           {/* <Fetchshortstory /> */}
           <Route exact path="/admin"
-                render={routeProps =>
-                  <Adminpage
-                    {...routeProps}
-                    questions={this.state.fetchContact} />
-                  } />
+            render={routeProps =>
+              <Adminpage
+                {...routeProps}
+                questions={this.state.fetchContact} />
+            } />
           <Route exact path="/story" component={Storypage} />
           <Route exact path="/about" component={Aboutpage} />
         </div>

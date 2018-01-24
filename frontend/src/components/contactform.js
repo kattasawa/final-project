@@ -1,4 +1,5 @@
 import React from "react"
+// import Adminpage from "pages/admin/adminpage"
 
 export default class Contactform extends React.Component {
   constructor(props) {

@@ -1,6 +1,5 @@
 import React from "react"
-import { withRouter } from "react-router-dom"
-import { Link } from "react-router-dom"
+
 import "./style.css"
 
 export default class Adminpage extends React.Component {
@@ -66,7 +65,6 @@ handleSubmit = event => {
 }
 
 render() {
-  const { questions } = this.props
   return (
     <div>
       <div className="form-container">
@@ -80,19 +78,17 @@ render() {
         </form>
       </div>
 
-
       <div className="contact-admin-container">
-
-          <p>{this.props.date}</p>
-          <div>{this.props.name}</div>
-          <div>{this.props.email}</div>
-          <div>{this.props.message}</div>
-
-
-        {/* <input type="text" value={this.props.name} />
-        <input type="text" value={this.props.email} />
-        <textarea type="text" value={this.props.message} /> */}
-
+        {this.props.questions.map(item => {
+          return (
+            <div>
+              <div>{item.date}</div>
+              <div>{item.name}</div>
+              <div>{item.email}</div>
+              <div>{item.message}</div>
+            </div>
+          )
+        })}
       </div>
 
     </div>
