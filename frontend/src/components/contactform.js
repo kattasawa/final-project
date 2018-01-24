@@ -51,9 +51,9 @@ render() {
   return (
     <div className="contactform-container">
       <form onSubmit={this.handleSubmit}>
-        <input type="text" placeholder="Namn" value={this.state.name} onChange={this.handleName} />
-        <input type="email" placeholder="Email" value={this.state.email} onChange={this.handleEmail} />
-        <input type="text" placeholder="Meddelande" value={this.state.message} onChange={this.handleMessage} />
+        <input type="text" required placeholder="Namn" value={this.state.name} onChange={this.handleName} />
+        <input type="email" required placeholder="Email" value={this.state.email} onChange={this.handleEmail} />
+        <input type="text" required placeholder="Meddelande" value={this.state.message} onChange={this.handleMessage} />
         <button>Skicka</button>
       </form>
     </div>

@@ -64,16 +64,20 @@ handleSubmit = event => {
   ))
 }
 
+handleRemove = () => {
+  this.props.delete(this.props.id)
+}
+
 render() {
   return (
     <div>
       <div className="form-container">
         <form onSubmit={this.handleSubmit}>
-          <input type="text" placeholder="Write heading here..." value={this.state.heading} onChange={this.handleHeading} />
-          <input type="text" placeholder="Write short text here..." value={this.state.shortText} onChange={this.handleShortText} />
-          <input type="text" placeholder="Write long text here..." value={this.state.longText} onChange={this.handleLongText} />
-          <input type="text" placeholder="Put image url here" value={this.state.image} onChange={this.handleImage} />
-          <input type="text" placeholder="Write caption here..." value={this.state.caption} onChange={this.handleCaption} />
+          <input type="text" required placeholder="Write heading here..." value={this.state.heading} onChange={this.handleHeading} />
+          <input type="text" required placeholder="Write short text here..." value={this.state.shortText} onChange={this.handleShortText} />
+          <input type="text" required placeholder="Write long text here..." value={this.state.longText} onChange={this.handleLongText} />
+          <input type="text" required placeholder="Put image url here" value={this.state.image} onChange={this.handleImage} />
+          <input type="text" required placeholder="Write caption here..." value={this.state.caption} onChange={this.handleCaption} />
           <button>Publicera</button>
         </form>
       </div>
@@ -82,10 +86,12 @@ render() {
         {this.props.questions.map(item => {
           return (
             <div>
+              <div>{item._id}</div>
               <div>{item.date}</div>
               <div>{item.name}</div>
               <div>{item.email}</div>
               <div>{item.message}</div>
+              <button className="delete-button" onClick={this.handleRemove}><i className="fa fa-times" aria-hidden="true" /></button>
             </div>
           )
         })}

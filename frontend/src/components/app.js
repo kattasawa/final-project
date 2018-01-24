@@ -26,6 +26,20 @@ class App extends React.Component {
     })
   }
 
+      handleRemoveText = (id) => {
+        const removeItem = this.state.fetchContact.filter(remove => {
+          if (remove.id === id) {
+            remove.id = !remove.id
+          }
+          return remove.id
+        })
+
+        console.log(removeItem)
+
+        this.setState({
+          fetchContact: removeItem
+        })
+      }
 
   render() {
     return (
@@ -38,7 +52,10 @@ class App extends React.Component {
             render={routeProps =>
               <Adminpage
                 {...routeProps}
-                questions={this.state.fetchContact} />
+                questions={this.state.fetchContact}
+                key={this.state._id}
+                id={this.state._id}
+                delete={this.state.fetchContact.handleRemoveText} />
             } />
           <Route exact path="/story" component={Storypage} />
           <Route exact path="/about" component={Aboutpage} />
