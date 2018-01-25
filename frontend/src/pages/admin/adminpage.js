@@ -1,5 +1,4 @@
 import React from "react"
-import AdminLogin from "pages/adminlogin/adminlogin"
 import "./style.css"
 
 export default class Adminpage extends React.Component {
@@ -10,9 +9,7 @@ export default class Adminpage extends React.Component {
       shortText: "",
       longText: "",
       image: "",
-      caption: "",
-      accessToken: "",
-      userId: ""
+      caption: ""
     }
   }
 
@@ -70,28 +67,9 @@ handleRemove = () => {
   this.props.delete(this.props.id)
 }
 
-//handle admin login
-
-handleLoginSuccess = user => {
-  this.setState({
-    accessToken: user.accessToken,
-    userId: user._id
-  })
-}
-
-isLoggedIn = () => (
-  this.state.accessToken && this.state.userId
-)
-
 render() {
   return (
     <div>
-
-      <div>
-        {this.isLoggedIn()
-          ? <h1>Welcome!</h1>
-          : <AdminLogin onLoginSuccess={this.handleLoginSuccess} />}
-      </div>
 
       <div className="form-container">
         <form onSubmit={this.handleSubmit}>
@@ -114,6 +92,7 @@ render() {
               <div>{item.email}</div>
               <div>{item.message}</div>
               <button className="delete-button" onClick={this.handleRemove}><i className="fa fa-times" aria-hidden="true" /></button>
+
             </div>
           )
         })}

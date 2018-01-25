@@ -1,6 +1,6 @@
 import React from "react"
 
-export default class AdminLogin extends React.Component {
+export default class AdminLoginForm extends React.Component {
 
   constructor(props) {
     super(props)

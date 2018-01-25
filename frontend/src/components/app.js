@@ -4,7 +4,7 @@ import Adminpage from "pages/admin/adminpage"
 import Storypage from "pages/story/storypage"
 import Aboutpage from "pages/about/aboutpage"
 // import Fetchshortstory from "./fetchshortstory"
-import AdminLogin from "pages/adminlogin/adminlogin"
+import AdminLoginPage from "pages/adminlogin/adminloginpage"
 
 class App extends React.Component {
 
@@ -59,7 +59,7 @@ class App extends React.Component {
             } />
           <Route exact path="/story" component={Storypage} />
           <Route exact path="/about" component={Aboutpage} />
-          <Route exact path="/adminlogin" component={AdminLogin} />
+          <Route exact path="/adminlogin" component={AdminLoginPage} />
         </div>
       </BrowserRouter>
     )
