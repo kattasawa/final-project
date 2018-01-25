@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import AdminLoginForm from "components/adminloginform"
 
 export default class AdminLoginPage extends React.Component {
@@ -25,13 +26,13 @@ export default class AdminLoginPage extends React.Component {
   )
 
   render() {
-  return (
-    <div>
-      {this.isLoggedIn()
-        ? <h1>Welcome!</h1>
-        : <AdminLoginForm onLoginSuccess={this.handleLoginSuccess} />}
-    </div>
-  )
+    return (
+      <div>
+        {this.isLoggedIn()
+          ? <h1>Välkommen!</h1>
+          : <AdminLoginForm onLoginSuccess={this.handleLoginSuccess} />}
+      </div>
+    )
 }
 
 }
