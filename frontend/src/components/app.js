@@ -5,6 +5,7 @@ import Storypage from "pages/story/storypage"
 import Aboutpage from "pages/about/aboutpage"
 // import Fetchshortstory from "./fetchshortstory"
 import AdminLoginPage from "pages/adminlogin/adminloginpage"
+import Navigation from "./navigation"
 
 class App extends React.Component {
 
@@ -26,29 +27,32 @@ class App extends React.Component {
     })
   }
 
-      handleRemoveText = (id) => {
-        const removeItem = this.state.fetchContact.filter(remove => {
-          if (remove.id === id) {
-            remove.id = !remove.id
-          }
-          return remove.id
-        })
-
-        console.log(removeItem)
-
-        this.setState({
-          fetchContact: removeItem
-        })
+  handleRemoveText = (id) => {
+    const removeItem = this.state.fetchContact.filter(remove => {
+      if (remove.id === id) {
+        remove.id = !remove.id
       }
+      return remove.id
+    })
+
+    console.log(removeItem)
+
+    this.setState({
+      fetchContact: removeItem
+    })
+  }
 
   render() {
     return (
       <BrowserRouter>
         <div>
+          <Navigation />
           {/* <Storypage /> */}
           {/* <Adminpage /> */}
           {/* <Fetchshortstory /> */}
-          <Route exact path="/admin"
+          <Route
+            exact
+            path="/admin"
             render={routeProps =>
               <Adminpage
                 {...routeProps}

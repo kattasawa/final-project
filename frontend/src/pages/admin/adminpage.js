@@ -91,8 +91,7 @@ render() {
               <div>{item.name}</div>
               <div>{item.email}</div>
               <div>{item.message}</div>
-              <button className="delete-button" onClick={this.handleRemove}><i className="fa fa-times" aria-hidden="true" /></button>
-
+              <button className="delete-button" onClick={this.handleRemove}><i className="fa fa-times" aria-hidden="true" />Ta bort</button>
             </div>
           )
         })}
