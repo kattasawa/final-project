@@ -2,6 +2,8 @@ import express from "express"
 import mongoose from "mongoose"
 import cors from "cors"
 import bodyParser from "body-parser"
+import uuid from "uuid/v4"
+import bcrypt from "bcrypt-nodejs"
 
 const app = express()
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -94,6 +96,53 @@ app.get("/contactform", (req, res) => {
   ContactInput.find().then(allContactInputs => {
     res.json(allContactInputs)
   })
+})
+
+//model and endpoint for admin login
+
+const AdminLogin = mongoose.model("AdminLogin", {
+  username: {
+    type: String,
+    unique: true
+  },
+  password: String,
+  accessToken: {
+    type: String,
+    default: () => uuid()
+  }
+})
+
+app.get("/", (rew, res) => {
+  const password = "supersecretpassword"
+  const hash = bcrypt.hashSynd(password)
+
+  res.send(`Signup for api. ${hash}`)
+})
+
+app.post("/adminusers", (req, res) => {
+  const { username } = req.body
+  const password = bcrypt.hashSync(req.body.password)
+  const adminuser = new AdminLogin({ username, password })
+
+  adminuser.save()
+    . then(() => res.status(201).json(adminuser))
+    .catch(err => res.status(400).json(err))
+})
+
+app.post("/adminlogin", (req, res) => {
+  AdminLogin.findOne({ username: req.body.username })
+    .then(adminuser => {
+      console.log(adminuser)
+      if (adminuser && bcrypt.compareSync(req.body.password, adminuser.password)) {
+        res.json(adminuser)
+      } else {
+        res.status(401).json({
+          errors: {
+            username: "Username is invalid"
+          }
+        })
+      }
+    })
 })
 
 app.listen(8080, () =>
