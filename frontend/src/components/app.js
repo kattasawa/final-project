@@ -51,7 +51,7 @@ class App extends React.Component {
           {/* <Adminpage /> */}
           {/* <Fetchshortstory /> */}
           <Route
-            exact
+            // exact
             path="/admin"
             render={routeProps =>
               <Adminpage

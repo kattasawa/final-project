@@ -19,6 +19,7 @@ export default class AdminLoginPage extends React.Component {
       accessToken: user.accessToken,
       userId: user._id
     })
+    this.props.history.push("/admin")
   }
 
   isLoggedIn = () => (
@@ -33,6 +34,6 @@ export default class AdminLoginPage extends React.Component {
           : <AdminLoginForm onLoginSuccess={this.handleLoginSuccess} />}
       </div>
     )
-}
+  }
 
 }
