@@ -98,6 +98,39 @@ app.get("/contactform", (req, res) => {
   })
 })
 
+//Delete information from contactform
+// beerRoute.delete(function(req, res) {
+//   // Use the Beer model to find a specific beer and remove it
+//   Beer.findByIdAndRemove(req.params.beer_id, function(err) {
+//     if (err)
+//       res.send(err);
+//
+//     res.json({ message: 'Beer removed from the locker!' });
+//   });
+// });
+
+app.delete("/contactform/:id", (req, res) => {
+  const condition = { _id: req.params.id }
+  ContactInput.update(condition, req.body)
+    .then(() => { res.status(201).send("Contact message deleted in MongoDB") })
+    .catch(err => { res.status(400).send(err) })
+})
+
+// app.delete("/contactform/:id", (req, res) => {
+//   ContactInput.findOneAndRemove({ _id: req.params.id })
+//     .then(() => { res.status(201).send("Contact message deleted in MongoDB") })
+//     .catch(err => { res.status(400).send(err) })
+// })
+
+// app.put("/questions/:id", (req, res) => {
+//   const condition = { _id: req.params.id }
+//   Question.update(condition, req.body)
+//     .then(() => { res.status(201).send("FAQ item updated in MongoDB") })
+//     .catch(err => { res.status(400).send(err) })
+// })
+
+
+
 //model and endpoint for admin login
 
 const AdminLogin = mongoose.model("AdminLogin", {
@@ -144,6 +177,7 @@ app.post("/adminlogin", (req, res) => {
       }
     })
 })
+
 
 app.listen(8080, () =>
   console.log("Example app listening on port 8080!"))
