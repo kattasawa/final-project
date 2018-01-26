@@ -29,17 +29,12 @@ class App extends React.Component {
   }
 
   handleRemoveText = (id) => {
-    const removeItem = this.state.fetchContact.filter(remove => {
-      if (remove.id === id) {
-        remove.id = !remove.id
-      }
-      return remove.id
+    const newItemList = this.state.fetchContact.filter(item => {
+     return item.id !== id
     })
 
-    console.log(removeItem)
-
     this.setState({
-      fetchContact: removeItem
+      fetchContact: newItemList
     })
   }
 
@@ -48,7 +43,7 @@ class App extends React.Component {
       <BrowserRouter>
         <div>
           <Navigation />
-          <Footer />
+          {/* <Footer /> */}
           <div className="app-wrapper">
             <Route exact path="/" component={Startpage} />
             <Route
@@ -58,9 +53,7 @@ class App extends React.Component {
                 <Adminpage
                   {...routeProps}
                   questions={this.state.fetchContact}
-                  key={this.state._id}
-                  id={this.state._id}
-                  delete={this.state.fetchContact.handleRemoveText} />
+                  delete={this.handleRemoveText} />
               } />
             <Route exact path="/story" component={Storypage} />
             <Route exact path="/about" component={Aboutpage} />
