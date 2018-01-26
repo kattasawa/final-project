@@ -7,7 +7,7 @@ export default class Navigation extends React.Component {
   render() {
     return (
       <nav>
-        <div className="logo"><Link to="/start"> Logo </Link>
+        <div className="logo"><Link to="/"> Logo </Link>
         </div>
         <ul>
           <li><Link to="/story">Story</Link></li>
