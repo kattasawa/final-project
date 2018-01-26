@@ -63,16 +63,15 @@ handleSubmit = event => {
   ))
 }
 
-handleDeleteClick = () => {
-  fetch("http://localhost:8080/contactform/:id", {
+handleDeleteClick = id => {
+  fetch(`http://localhost:8080/contactform/${id}`, {
     method: "DELETE",
     headers: {
       Accept: "application/json, text/plain, */*",
       "Content-Type": "application/json"
     }
   }).then(
-    this.props.delete(this.props.id)
-  )
+    this.props.delete(id))
 }
 
 
@@ -100,7 +99,7 @@ render() {
               <div>{item.name}</div>
               <div>{item.email}</div>
               <div>{item.message}</div>
-              <button className="delete-button" onClick={this.handleDeleteClick}><i className="fa fa-times" aria-hidden="true" />Ta bort</button>
+              <button className="delete-button" onClick={() => this.handleDeleteClick(item._id)}><i className="fa fa-times" aria-hidden="true" />Ta bort</button>
             </div>
           )
         })}

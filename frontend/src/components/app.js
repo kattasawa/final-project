@@ -28,9 +28,9 @@ class App extends React.Component {
     })
   }
 
-  handleRemoveText = (id) => {
+  handleRemoveText = (_id) => {
     const newItemList = this.state.fetchContact.filter(item => {
-     return item.id !== id
+     return item._id !== _id
     })
 
     this.setState({
