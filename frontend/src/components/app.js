@@ -3,9 +3,10 @@ import { BrowserRouter, Route } from "react-router-dom"
 import Adminpage from "pages/admin/adminpage"
 import Storypage from "pages/story/storypage"
 import Aboutpage from "pages/about/aboutpage"
-// import Fetchshortstory from "./fetchshortstory"
+import Startpage from "pages/start/startpage"
 import AdminLoginPage from "pages/adminlogin/adminloginpage"
 import Navigation from "./navigation"
+import Footer from "./footer"
 
 class App extends React.Component {
 
@@ -47,23 +48,24 @@ class App extends React.Component {
       <BrowserRouter>
         <div>
           <Navigation />
-          {/* <Storypage /> */}
-          {/* <Adminpage /> */}
-          {/* <Fetchshortstory /> */}
-          <Route
-            // exact
-            path="/admin"
-            render={routeProps =>
-              <Adminpage
-                {...routeProps}
-                questions={this.state.fetchContact}
-                key={this.state._id}
-                id={this.state._id}
-                delete={this.state.fetchContact.handleRemoveText} />
-            } />
-          <Route exact path="/story" component={Storypage} />
-          <Route exact path="/about" component={Aboutpage} />
-          <Route exact path="/adminlogin" component={AdminLoginPage} />
+          <Footer />
+          <div className="app-wrapper">
+            <Route exact path="/" component={Startpage} />
+            <Route
+              // exact
+              path="/admin"
+              render={routeProps =>
+                <Adminpage
+                  {...routeProps}
+                  questions={this.state.fetchContact}
+                  key={this.state._id}
+                  id={this.state._id}
+                  delete={this.state.fetchContact.handleRemoveText} />
+              } />
+            <Route exact path="/story" component={Storypage} />
+            <Route exact path="/about" component={Aboutpage} />
+            <Route exact path="/adminlogin" component={AdminLoginPage} />
+          </div>
         </div>
       </BrowserRouter>
     )
