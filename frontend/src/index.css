@@ -7,18 +7,25 @@ body {
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4, p {
+  padding: 0;
+  margin: 0;
+}
+
 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
+  line-height: 2.8em;
 }
 
 h2 {
   font-size: 1.9em;
+  line-height: 2.6em;
 }
 
 h3 {
   font-size: 1.5em;
+  line-height: 1.9em;
 }
-
 
 a {
   text-decoration: none;
@@ -49,13 +56,14 @@ input, textarea{
 
 textarea {
   height: 30vh;
+  resize: vertical;
 }
 
 button {
   border: 0;
   padding: 1em;
-  background-color: red;
-  font-family: 'Montserrat', sans-serif;
+  background-color: #2d6c33;
+  /* font-family: 'Montserrat', sans-serif; */
   font-size: 1em;
   text-transform: uppercase;
   text-align: center;

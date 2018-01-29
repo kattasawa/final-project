@@ -105,25 +105,32 @@ render() {
         </form>
       </div>
 
-      <h3>
-        Meddelanden
-      </h3>
-
-      <div>
-        {this.props.questions.map(item => {
-          return (
-            <div className="contact-admin-container" >
-
-              <p className="contact-admin-input">{item.date}</p>
-              <p className="contact-admin-input">{item.name}</p>
-              <p className="contact-admin-input">{item.email}</p>
-              <p className="contact-admin-input">{item.message}</p>
-              <button className="delete-button" onClick={() => this.handleDeleteClick(item._id)}><i className="fa fa-times" aria-hidden="true" /></button>
-            </div>
-          )
-        })}
+      <div className="form-container green">
+        <a href="http://assemble.io/docs/Cheatsheet-Markdown.html" target="_blank" rel="noopener noreferrer">
+        <h3><span className="white-text">Här kan du läsa mer om att skriva med markdown <i class="fa fa-arrow-circle-right" aria-hidden="true" /> </span></h3></a>
       </div>
 
+      <div className="contact-admin-container">
+        <h3>
+          Meddelanden
+        </h3>
+
+        <div>
+          {this.props.questions.map(item => {
+            return (
+              <div className="contact-admin-box" >
+
+                <p className="contact-admin-input">{item.date}</p>
+                <p className="contact-admin-input">{item.name}</p>
+                <p className="contact-admin-input">{item.email}</p>
+                <p className="contact-admin-input">{item.message}</p>
+                <button className="delete-button" onClick={() => this.handleDeleteClick(item._id)}><i className="fa fa-times" aria-hidden="true" /></button>
+              </div>
+            )
+          })}
+        </div>
+
+      </div>
     </div>
   )
 }
