@@ -12,7 +12,7 @@ export default class Footer extends React.Component {
       <footer>
         <i class="fa fa-copyright" aria-hidden="true">{year}</i>
         <ul>
-          <li><Link to="/adminlogin">Admin</Link></li>
+          <li><Link to="/login">Admin</Link></li>
         </ul>
       </footer>
     )

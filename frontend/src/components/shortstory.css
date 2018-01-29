@@ -2,15 +2,64 @@
   background-color: lightblue;
   max-width: 100%;
   display: flex;
-  align-items: center;
 }
 
 .shortstory-image-container {
   max-width: 300px;
   max-height: 250px;
+  padding: 10px;
 }
 
 #shortstory-image {
   max-width: 300px;
   max-height: auto;
 }
+
+.shortstory-text-container {
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.shorttext {
+  background-color: orange;
+  flex-grow: 2;
+}
+
+@media (max-width: 620px){
+  .shortstory-container {
+    background-color: lightblue;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .shortstory-image-container {
+    width: 100%;
+  }
+
+  #shortstory-image {
+    display: block;
+  }
+
+  .shortstory-text-container {
+    width: 100%;
+    display: block;
+    margin-left: none;
+  }
+  .shorttext {
+    display: block;
+  }
+}
+
+@media (min-width:621px) and (max-width:800px){
+  }
+
+@media (min-width: 801px){
+  }
