@@ -82,34 +82,43 @@ handleDeleteClick = id => {
     this.props.delete(id))
 }
 
-
 render() {
   return (
-    <div>
+    <div className="Admin">
+
+      <h2><span className="white-text">Administratörssida</span></h2>
 
       <div className="form-container">
+        <h3>
+          Innehåll till stories
+        </h3>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" required placeholder="Write heading here..." value={this.state.heading} onChange={this.handleHeading} />
-          <textarea type="text" required placeholder="Write short text here..." value={this.state.shortText} onChange={this.handleShortText} />
-          <textarea type="text" required placeholder="Write long text here..." value={this.state.longText} onChange={this.handleLongText} />
-          <input type="text" required placeholder="Put image url here" value={this.state.image} onChange={this.handleImage} />
-          <input type="text" required placeholder="Write caption here..." value={this.state.caption} onChange={this.handleCaption} />
+          <input type="text" required placeholder="Rubrik" value={this.state.heading} onChange={this.handleHeading} />
+          <textarea type="text" required placeholder="Puff till startsidan" value={this.state.shortText} onChange={this.handleShortText} />
+          <textarea type="text" required placeholder="Text" value={this.state.longText} onChange={this.handleLongText} />
+          <input type="text" required placeholder="Bildens url" value={this.state.image} onChange={this.handleImage} />
+          <input type="text" required placeholder="Bildtext" value={this.state.caption} onChange={this.handleCaption} />
+          <button>Publicera</button>
           <div className="message">
-            {this.getAdminMessagereply ()}
+            {this.getAdminMessagereply()}
           </div>
-        <button>Publicera</button>
         </form>
       </div>
 
-      <div className="contact-admin-container">
+      <h3>
+        Meddelanden
+      </h3>
+
+      <div>
         {this.props.questions.map(item => {
           return (
-            <div>
-              <div>{item.date}</div>
-              <div>{item.name}</div>
-              <div>{item.email}</div>
-              <div>{item.message}</div>
-              <button className="delete-button" onClick={() => this.handleDeleteClick(item._id)}><i className="fa fa-times" aria-hidden="true" />Ta bort</button>
+            <div className="contact-admin-container" >
+
+              <p className="contact-admin-input">{item.date}</p>
+              <p className="contact-admin-input">{item.name}</p>
+              <p className="contact-admin-input">{item.email}</p>
+              <p className="contact-admin-input">{item.message}</p>
+              <button className="delete-button" onClick={() => this.handleDeleteClick(item._id)}><i className="fa fa-times" aria-hidden="true" /></button>
             </div>
           )
         })}

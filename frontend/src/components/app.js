@@ -44,8 +44,8 @@ class App extends React.Component {
       <BrowserRouter>
         <div>
           <Navigation />
-          <Footer />
-          <div className="app-wrapper">
+          {/* <Footer /> */}
+          {/* <div className="app-wrapper"> */}
             <Route exact path="/" component={Startpage} />
             <Route
               // exact
@@ -60,7 +60,7 @@ class App extends React.Component {
             <Route exact path="/about" component={Aboutpage} />
             <Route exact path="/adminlogin" component={AdminLoginPage} />
           </div>
-        </div>
+        {/* </div> */}
       </BrowserRouter>
     )
   }
