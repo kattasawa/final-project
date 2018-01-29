@@ -1,5 +1,6 @@
 import React from "react"
 import { BrowserRouter, Route } from "react-router-dom"
+
 import Adminpage from "pages/admin/adminpage"
 import Storypage from "pages/story/storypage"
 import Aboutpage from "pages/about/aboutpage"
@@ -43,7 +44,7 @@ class App extends React.Component {
       <BrowserRouter>
         <div>
           <Navigation />
-          {/* <Footer /> */}
+          <Footer />
           <div className="app-wrapper">
             <Route exact path="/" component={Startpage} />
             <Route

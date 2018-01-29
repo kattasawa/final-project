@@ -1,0 +1,16 @@
+.shortstory-container {
+  background-color: lightblue;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.shortstory-image-container {
+  max-width: 300px;
+  max-height: 250px;
+}
+
+#shortstory-image {
+  max-width: 300px;
+  max-height: auto;
+}
