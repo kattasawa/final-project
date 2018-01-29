@@ -7,7 +7,8 @@ export default class Contactform extends React.Component {
     this.state = {
       name: "",
       email: "",
-      message: ""
+      message: "",
+      messagesreply: ""
     }
   }
 
@@ -29,6 +30,12 @@ handleMessage = event => {
   })
 }
 
+getMessagereply = () => {
+  if (this.state.messagereply) {
+    return <p>{this.state.messagereply}</p>
+  }
+}
+
 handleSubmit = event => {
   event.preventDefault()
   fetch("http://localhost:8080/contactform", {
@@ -42,7 +49,8 @@ handleSubmit = event => {
     this.setState({
       name: "",
       email: "",
-      message: ""
+      message: "",
+      messagereply: "Meddelandet skickat!"
     }, () => { console.log("State has been reset", response, response.status) })
   ))
 }
@@ -54,6 +62,9 @@ render() {
         <input type="text" required placeholder="Namn" value={this.state.name} onChange={this.handleName} />
         <input type="email" required placeholder="Email" value={this.state.email} onChange={this.handleEmail} />
         <input type="text" required placeholder="Meddelande" value={this.state.message} onChange={this.handleMessage} />
+        <div className="message">
+          {this.getMessagereply()}
+        </div>
         <button>Skicka</button>
       </form>
     </div>

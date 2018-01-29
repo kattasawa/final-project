@@ -9,7 +9,8 @@ export default class Adminpage extends React.Component {
       shortText: "",
       longText: "",
       image: "",
-      caption: ""
+      caption: "",
+      adminmessagereply: ""
     }
   }
 
@@ -43,6 +44,12 @@ handleCaption = event => {
   })
 }
 
+getAdminMessagereply = () => {
+  if (this.state.adminmessagereply) {
+    return <p>{this.state.adminmessagereply}</p>
+  }
+}
+
 handleSubmit = event => {
   event.preventDefault()
   fetch("http://localhost:8080/adminstory", {
@@ -58,7 +65,8 @@ handleSubmit = event => {
       shortText: "",
       longText: "",
       image: "",
-      caption: ""
+      caption: "",
+      adminmessagereply: "Innehållet publicerat!"
     }, () => { console.log("State has been reset", response, response.status) })
   ))
 }
@@ -86,7 +94,10 @@ render() {
           <input type="text" required placeholder="Write long text here..." value={this.state.longText} onChange={this.handleLongText} />
           <input type="text" required placeholder="Put image url here" value={this.state.image} onChange={this.handleImage} />
           <input type="text" required placeholder="Write caption here..." value={this.state.caption} onChange={this.handleCaption} />
-          <button>Publicera</button>
+          <div className="message">
+            {this.getAdminMessagereply ()}
+          </div>
+        <button>Publicera</button>
         </form>
       </div>
 
