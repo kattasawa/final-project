@@ -1,5 +1,5 @@
 import React from "react"
-// import { Link } from "react-router-dom"
+//import { Link } from "react-router-dom"
 import AdminLoginForm from "components/adminloginform"
 
 export default class AdminLoginPage extends React.Component {
