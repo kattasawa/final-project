@@ -90,8 +90,8 @@ render() {
       <div className="form-container">
         <form onSubmit={this.handleSubmit}>
           <input type="text" required placeholder="Write heading here..." value={this.state.heading} onChange={this.handleHeading} />
-          <input type="text" required placeholder="Write short text here..." value={this.state.shortText} onChange={this.handleShortText} />
-          <input type="text" required placeholder="Write long text here..." value={this.state.longText} onChange={this.handleLongText} />
+          <textarea type="text" required placeholder="Write short text here..." value={this.state.shortText} onChange={this.handleShortText} />
+          <textarea type="text" required placeholder="Write long text here..." value={this.state.longText} onChange={this.handleLongText} />
           <input type="text" required placeholder="Put image url here" value={this.state.image} onChange={this.handleImage} />
           <input type="text" required placeholder="Write caption here..." value={this.state.caption} onChange={this.handleCaption} />
           <div className="message">
@@ -105,7 +105,6 @@ render() {
         {this.props.questions.map(item => {
           return (
             <div>
-              <div>{item._id}</div>
               <div>{item.date}</div>
               <div>{item.name}</div>
               <div>{item.email}</div>
