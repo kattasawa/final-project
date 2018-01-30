@@ -59,8 +59,8 @@ class App extends React.Component {
             <Route exact path="/story" component={Storypage} />
             <Route exact path="/about" component={Aboutpage} />
             <Route exact path="/login" component={AdminLoginPage} />
-            
-            <Footer />
+
+            {/* <Footer /> */}
           </div>
         {/* </div> */}
 
