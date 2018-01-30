@@ -94,11 +94,51 @@ render() {
           Innehåll till stories
         </h3>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" required placeholder="Rubrik" value={this.state.heading} onChange={this.handleHeading} />
-          <textarea type="text" required placeholder="Puff till startsidan" value={this.state.shortText} onChange={this.handleShortText} />
-          <textarea type="text" required placeholder="Text" value={this.state.longText} onChange={this.handleLongText} />
-          <input type="text" required placeholder="Bildens url" value={this.state.image} onChange={this.handleImage} />
-          <input type="text" required placeholder="Bildtext" value={this.state.caption} onChange={this.handleCaption} />
+          <label>
+            Rubrik
+            <input
+              type="text"
+              required
+              placeholder="Rubrik"
+              value={this.state.heading}
+              onChange={this.handleHeading} />
+          </label>
+          <label>
+            Pufftext till startsidan
+            <textarea
+              type="text"
+              required
+              placeholder="Pufftext till startsidan"
+              value={this.state.shortText}
+              onChange={this.handleShortText} />
+          </label>
+          <label>
+              Text
+            <textarea
+              type="text"
+              required
+              placeholder="Text"
+              value={this.state.longText}
+              onChange={this.handleLongText} />
+          </label>
+          <label>
+              Bildens url
+            <input
+              type="text"
+              required
+              placeholder="Bildens url"
+              value={this.state.image}
+              onChange={this.handleImage} />
+          </label>
+          <label>
+              Bildtext
+            <input
+              type="text"
+              required
+              placeholder="Bildtext"
+              value={this.state.caption}
+              onChange={this.handleCaption} />
+          </label>
           <button>Publicera</button>
           <div className="message">
             {this.getAdminMessagereply()}
