@@ -15,6 +15,17 @@ export default class Adminpage extends React.Component {
     }
   }
 
+componentDidMount() {
+    const accessToken = localStorage.getItem("accessToken")
+    const userId = localStorage.getItem("userId")
+
+    if (accessToken && userId) {
+      return true
+    } else {
+      this.props.history.push("/login")
+    }
+  }
+
 handleHeading = event => {
   this.setState({
     heading: event.target.value

@@ -44,6 +44,7 @@ class App extends React.Component {
       <BrowserRouter>
         <div>
           <Navigation />
+          <Footer />
 
           {/* <div className="app-wrapper"> */}
             <Route exact path="/" component={Startpage} />

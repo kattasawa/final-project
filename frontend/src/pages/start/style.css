@@ -38,3 +38,9 @@ footer {
 footer a {
   color: #fff;
 }
+
+i  {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: red;
+}

@@ -19,6 +19,8 @@ export default class AdminLoginPage extends React.Component {
       accessToken: user.accessToken,
       userId: user._id
     })
+    localStorage.setItem("accessToken", user.accessToken)
+    localStorage.setItem("userId", user._id)
     this.props.history.push("/admin")
   }
 
