@@ -47,22 +47,22 @@ class App extends React.Component {
           <Footer />
 
           {/* <div className="app-wrapper"> */}
-            <Route exact path="/" component={Startpage} />
-            <Route
-              // exact
-              path="/admin"
-              render={routeProps =>
-                <Adminpage
-                  {...routeProps}
-                  questions={this.state.fetchContact}
-                  delete={this.handleRemoveText} />
-              } />
-            <Route exact path="/story" component={Storypage} />
-            <Route exact path="/about" component={Aboutpage} />
-            <Route exact path="/login" component={AdminLoginPage} />
+          <Route exact path="/" component={Startpage} />
+          <Route
+            // exact
+            path="/admin"
+            render={routeProps =>
+              <Adminpage
+                {...routeProps}
+                questions={this.state.fetchContact}
+                delete={this.handleRemoveText} />
+            } />
+          <Route exact path="/story" component={Storypage} />
+          <Route exact path="/about" component={Aboutpage} />
+          <Route exact path="/login" component={AdminLoginPage} />
 
             {/* <Footer /> */}
-          </div>
+        </div>
         {/* </div> */}
 
       </BrowserRouter>
