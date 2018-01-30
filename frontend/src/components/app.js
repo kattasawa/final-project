@@ -8,6 +8,7 @@ import Startpage from "pages/start/startpage"
 import AdminLoginPage from "pages/adminlogin/adminloginpage"
 import Navigation from "./navigation"
 import Footer from "./footer"
+import Hero from "./hero"
 
 class App extends React.Component {
 
@@ -44,6 +45,7 @@ class App extends React.Component {
       <BrowserRouter>
         <div>
           <Navigation />
+          <Route exact path="/" component={Hero} />
           <Footer />
 
           {/* <div className="app-wrapper"> */}

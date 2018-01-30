@@ -1,0 +1,41 @@
+.contactform-container {
+  background-color: #3b494a;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 20%;
+}
+
+.two-in-a-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #3b494a;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #3b494a;
+}
+
+.first {
+  width: 48%;
+}
+
+.second {
+  width: 48%;
+}
+
+.skicka-btn-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#skicka-btn {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 400;
+  background-color: #3b494a;
+  border: 1.5px solid #fff;
+  color: #fff;
+}

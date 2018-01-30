@@ -1,18 +1,38 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-import "pages/start/style.css"
+// import "pages/start/style.css"
+import "./navigation.css"
 
 export default class Navigation extends React.Component {
   render() {
     return (
-      <nav>
-        <div className="logo"><Link to="/"> Logo </Link>
-        </div>
-        <ul>
+      <nav className="header-container">
+
+        {/* <ul className="menu-desktop">
           <li><Link to="/story">Story</Link></li>
           <li><Link to="/about">Om oss</Link></li>
-        </ul>
+        </ul> */}
+
+        <input id="hamburger" type="checkbox" className="hamburger-checkbox" />
+        <label className="hamburger" htmlFor="hamburger">
+          <div className="bar bar1" />
+          <div className="bar bar2" />
+          <div className="bar bar3" />
+        </label>
+
+        <div className="logo">
+          <Link to="/">
+            <img src="/images/logo_stotta_mamma_black.svg" alt="logo" />
+          </Link>
+        </div>
+
+        <div className="menu">
+          <ul className="menu-list">
+            <li><Link to="/story" onClick={() => this.collapse("hamburger-checkbox:checked", "menu")}>Story</Link></li>
+            <li><Link to="/about" onClick={() => this.collapse("hamburger-checkbox:checked", "menu")}>Om oss</Link></li>
+          </ul>
+        </div>
       </nav>
     )
   }

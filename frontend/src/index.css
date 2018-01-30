@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Catamaran', sans-serif;
 }
 
 *{
@@ -15,19 +15,16 @@ h1, h2, h3, h4, p {
 h1 {
   font-size: 2.5em;
   line-height: 2.8em;
-  margin: 0;
 }
 
 h2 {
   font-size: 1.9em;
   line-height: 2.6em;
-  margin: 0;
 }
 
 h3 {
   font-size: 1.5em;
   line-height: 1.9em;
-  margin: 0;
 }
 
 a {
@@ -53,8 +50,9 @@ input, textarea{
   width: 100%;
   padding: 1em;
   margin: 0.7em 0 1.5em 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 400;
+  font-size: 1.4em;
   border: none;
 }
 
@@ -70,14 +68,14 @@ button {
   padding: 1em;
   background-color: #2d6c33;
   border: 3px solid #2d6c33;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 400;
   font-size: 1.1em;
   line-height: 1em;
   text-transform: uppercase;
   color: #fff;
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: 1.3px;
 }
 
 button:hover {

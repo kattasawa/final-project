@@ -1,5 +1,6 @@
 import React from "react"
 // import Adminpage from "pages/admin/adminpage"
+import "./contactform.css"
 
 export default class Contactform extends React.Component {
   constructor(props) {
@@ -59,13 +60,21 @@ render() {
   return (
     <div className="contactform-container">
       <form onSubmit={this.handleSubmit}>
-        <input type="text" required placeholder="Namn" value={this.state.name} onChange={this.handleName} />
-        <input type="email" required placeholder="Email" value={this.state.email} onChange={this.handleEmail} />
-        <input type="text" required placeholder="Meddelande" value={this.state.message} onChange={this.handleMessage} />
+        <div className="two-in-a-row">
+          <div className="first">
+            <input type="text" required placeholder="Namn" value={this.state.name} onChange={this.handleName} />
+          </div>
+          <div className="second">
+            <input type="email" required placeholder="Email" value={this.state.email} onChange={this.handleEmail} />
+          </div>
+        </div>
+        <textarea type="text" required placeholder="Meddelande" value={this.state.message} onChange={this.handleMessage} />
         <div className="message">
           {this.getMessagereply()}
         </div>
-        <button>Skicka</button>
+        <div className="skicka-btn-flex">
+          <button id="skicka-btn">Skicka</button>
+        </div>
       </form>
     </div>
   )

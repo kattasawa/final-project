@@ -1,0 +1,147 @@
+.header-container {
+  height: 200px;
+}
+
+#hamburger {
+  display: none;
+}
+
+.logo img {
+  position: absolute;
+  top: 6%;
+}
+
+li {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+li:hover, a:hover {
+  color: black;
+  text-decoration: line-through;
+}
+
+.visited {
+  color: black;
+  text-decoration: line-through;
+}
+
+/* mobile and tablet */
+@media (max-width: 900px){
+  .header-container {
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+
+  .logo img {
+    text-align: center;
+    width: 68px;
+    height: 68px;
+    margin: -58%;
+    position: relative;
+    z-index: 10;
+  }
+
+  .menu-list {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 22px 0 22px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+  }
+
+  .menu-desktop {
+    display: none;
+    width: 20%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0;
+    margin-top: 12px;
+  }
+
+  li {
+    list-style-type: none;
+    letter-spacing: 2px;
+    line-height: 30px;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin: 35px auto;
+  }
+
+  li:hover, a:hover {
+    color: #fff;
+    text-decoration: line-through;
+  }
+
+  /* #topNav a:hover {text-decoration: line-through;} */
+
+
+  .hamburger {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    cursor: pointer;
+    margin-right: 60px;
+    padding: 15px 0 10px 15px;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .bar {
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    margin: 0 0 3px 5px;
+  }
+
+  .menu {
+    background: white;
+    width: 100%;
+    position: absolute;
+    top: -70px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.6);
+
+  }
+
+  .hamburger-checkbox {
+    display: none;
+  }
+
+  .hamburger-checkbox:checked ~ .menu {
+    width: 100%;
+    height: 100%;
+    background-color: #3b494a;
+    top: 95px;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .hamburger-checkbox:checked + .hamburger .bar1 {
+    transform: rotate(-45deg) translate(-6px, 5px);
+  }
+
+  .hamburger-checkbox:checked + .hamburger .bar2 {
+    opacity: 0;
+  }
+
+  .hamburger-checkbox:checked + .hamburger .bar3 {
+    transform: rotate(45deg) translate(-5px, -5px) ;
+  }
+}
+
+/* @media (min-width:621px) and (max-width:800px){
+  }
+
+@media (min-width: 801px){
+  } */
