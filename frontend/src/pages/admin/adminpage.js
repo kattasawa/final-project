@@ -106,9 +106,9 @@ render() {
         </form>
       </div>
 
-      <div className="form-container green">
+      <div className="form-container-green">
         <a href="http://assemble.io/docs/Cheatsheet-Markdown.html" target="_blank" rel="noopener noreferrer">
-        <h3><span className="white-text">Här kan du läsa mer om att skriva med markdown&nbsp; &nbsp; <i className="fa fa-arrow-circle-right" aria-hidden="true" /> </span></h3></a>
+        Här kan du läsa mer om att skriva med markdown&nbsp; &nbsp; <i className="fa fa-arrow-circle-right" aria-hidden="true" /> </a>
       </div>
 
       <div className="contact-admin-container">
