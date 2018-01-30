@@ -58,26 +58,33 @@ export default class AdminLoginForm extends React.Component {
   render() {
     return (
       <div className="Login">
-        <form onSubmit={this.handleFormSubmit}>
-          <label>
-            Username
-            <span>{this.state.errors.username}</span>
-            <input
-              onChange={this.handleUsernameChange}
-              value={this.state.username}
-              type="text" />
-          </label>
+        <h2><span className="white-text">Logga in till administratörssidan</span></h2>
+        <div className="admin-login-container">
+          <form onSubmit={this.handleFormSubmit}>
+            <label>
+              Användarnamn
+              <span>{this.state.errors.username}</span>
+              <input
+                onChange={this.handleUsernameChange}
+                value={this.state.username}
+                required
+                placeholder="Skriv ditt användarnamn här"
+                type="text" />
+            </label>
 
-          <label>
-            Password
-            <input
-              onChange={this.handlePasswordChange}
-              value={this.state.password}
-              type="password" />
-          </label>
+            <label>
+              Lösenord
+              <input
+                onChange={this.handlePasswordChange}
+                value={this.state.password}
+                required
+                placeholder="Skriv ditt lösenord här"
+                type="password" />
+            </label>
 
-          <button>Log in</button>
-        </form>
+            <button>Log in</button>
+          </form>
+        </div>
       </div>
     )
   }
