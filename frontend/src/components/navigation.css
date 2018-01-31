@@ -11,22 +11,27 @@
   top: 6%;
 }
 
-li {
+.menu-list li {
   font-family: 'Catamaran', sans-serif;
   font-weight: 400;
   font-size: 1.5em;
   text-transform: uppercase;
 }
 
-li:hover, a:hover {
+.menu-list li:hover, a:hover {
   color: black;
   text-decoration: line-through;
 }
 
-.visited {
+/* .visited {
   color: black;
   text-decoration: line-through;
-}
+} */
+
+/* .menu-list li:active {
+  color: black;
+  text-decoration: line-through;
+} */
 
 /* mobile and tablet */
 @media (max-width: 900px){

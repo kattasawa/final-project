@@ -1,6 +1,10 @@
 import React from "react"
+import moment from "moment"
 
 import "./style.css"
+
+// const sv = moment.locale("sv").format("LLL")
+const date = moment().format("DD MMMM YYYY, h:mm")
 
 export default class Adminpage extends React.Component {
   constructor(props) {
@@ -172,7 +176,7 @@ render() {
             return (
               <div className="contact-admin-box" >
 
-                <p className="contact-admin-input">{item.date}</p>
+                <p className="contact-admin-input">{date}</p>
                 <p className="contact-admin-input">{item.name}</p>
                 <p className="contact-admin-input">{item.email}</p>
                 <p className="contact-admin-input">{item.message}</p>

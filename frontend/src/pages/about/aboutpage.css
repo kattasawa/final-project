@@ -4,11 +4,31 @@
   height: 100%;
 }
 
-h2 {
-  
+h1 {
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #fff;
 }
 
-p {
+.underline {
+  width: 7%;
+  margin-top: -27px;
+  border: 0.7px solid #fff;
+}
+
+.first-text h2 {
+  color: #fff;
+  text-align: center;
+}
+
+.first-text h4 {
+  color: #fff;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.first-text p {
   font-weight: 100;
   color: white;
   text-align: center;
@@ -16,4 +36,22 @@ p {
 
 .first-text {
   padding: 5% 20%;
+}
+
+.featureList li {
+  color: #fff;
+  text-decoration: none;
+}
+
+.featureList li:hover, a:hover {
+  font-weight: 100;
+  font-size: 1.2em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.featureList li.tick:before {
+  content: "\2713";
+  color: #fff;
+  text-transform: none;
 }
