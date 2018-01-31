@@ -8,6 +8,21 @@
   height: auto;
 }
 
-.caption, .heading, .longtext  {
+.heading, .longtext  {
   margin-top: 20px;
+}
+
+.longstory-page h2 {
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.longstory-page p {
+  margin-top: 4px;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.longtext {
+
 }

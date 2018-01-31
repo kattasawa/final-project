@@ -12,7 +12,7 @@ export default class Fetchshortstory extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://admin-story-api.herokuapp.com/latest").then(response => {
+    fetch("https://admin-story-api.herokuapp.com/adminstory/latest").then(response => {
       return response.json()
     }).then(json => {
       console.log(json)

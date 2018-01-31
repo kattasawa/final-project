@@ -10,39 +10,29 @@
   border: 0.7px solid black;
 }
 
-.shortstory-image-container {
+/* .shortstory-image-container {
   padding: 5px;
-}
+} */
 
 #shortstory-image {
   object-fit: cover;
   width: 330px;
   height: 330px;
+  padding: 5px;
+  vertical-align: middle;
 }
 
-/* .heading h2 {
-  font-family: 'Nunito', sans-serif;
+.shortstory-box h2 {
   font-weight: 200;
-  color: black;
+  font-size: 3.5em;
   text-transform: uppercase;
-} */
-
-/* .shortstory-image-container {
-  max-width: 300px;
-  max-height: 250px;
-  padding: 10px;
 }
-
-#shortstory-image {
-  max-width: 300px;
-  max-height: auto;
-} */
 
 .shortstory-text-container {
 
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  margin: auto 20px;
 }
 
 .shorttext {

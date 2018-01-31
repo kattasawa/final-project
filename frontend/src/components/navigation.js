@@ -9,11 +9,6 @@ export default class Navigation extends React.Component {
     return (
       <nav className="header-container">
 
-        {/* <ul className="menu-desktop">
-          <li><Link to="/story">Story</Link></li>
-          <li><Link to="/about">Om oss</Link></li>
-        </ul> */}
-
         <input id="hamburger" type="checkbox" className="hamburger-checkbox" />
         <label className="hamburger" htmlFor="hamburger">
           <div className="bar bar1" />
