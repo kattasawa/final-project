@@ -20,6 +20,13 @@
   height: 330px;
 }
 
+/* .heading h2 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  color: black;
+  text-transform: uppercase;
+} */
+
 /* .shortstory-image-container {
   max-width: 300px;
   max-height: 250px;
@@ -32,20 +39,20 @@
 } */
 
 .shortstory-text-container {
-  background-color: green;
+
   display: flex;
   flex-direction: column;
   margin-left: 20px;
 }
 
 .shorttext {
-  background-color: orange;
+
   flex-grow: 2;
 }
 
 @media (max-width: 620px){
   .shortstory-container {
-    background-color: lightblue;
+
     width: 100%;
     height: auto;
     margin: auto;
