@@ -12,7 +12,7 @@ export default class Aboutpage extends React.Component {
         <div className="underline" />
         <div className="first-text">
           <h2>Stötta Mamma</h2>
-          <h4>DOULA</h4>
+          <h4>DOULA</h4><br />
           <p>
 Doulastöd inför, under och efter förlossning
 Att föda barn är en fysisk, psykologisk och spirituell upplevelse. I Sverige finns ofta tillräcklig medicinsk vård- men det är inte alltid barnmorska eller partner har tid och möjlighet att vara ett kontinuerligt känslomässigt stöd. Det är inga tvivel om hur viktig omvårdnaden är under förlossningen- forskning visar att det är avgörande för mammans psykiska hälsa, för anknytning och amning och för relationen mellan föräldrarna.

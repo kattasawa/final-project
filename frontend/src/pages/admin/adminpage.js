@@ -68,7 +68,7 @@ getAdminMessagereply = () => {
 
 handleSubmit = event => {
   event.preventDefault()
-  fetch("http://localhost:8080/adminstory", {
+  fetch("https://admin-story-api.herokuapp.com/adminstory", {
     method: "POST",
     headers: {
       Accept: "application/json, text/plain, */*",

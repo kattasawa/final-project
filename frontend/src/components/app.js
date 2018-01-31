@@ -9,6 +9,7 @@ import AdminLoginPage from "pages/adminlogin/adminloginpage"
 import Navigation from "./navigation"
 import Footer from "./footer"
 import Hero from "./hero"
+import Grid from "./grid"
 
 class App extends React.Component {
 
@@ -20,7 +21,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8080/contactform").then(response => {
+    fetch("https://admin-story-api.herokuapp.com/contactform").then(response => {
       return response.json()
     }).then(json => {
       console.log(json)
@@ -46,10 +47,12 @@ class App extends React.Component {
         <div>
           <Navigation />
           <Route exact path="/" component={Hero} />
-          <Footer />
+
 
           {/* <div className="app-wrapper"> */}
           <Route exact path="/" component={Startpage} />
+          <Route exact path="/" component={Grid} />
+          <Footer />
           <Route
             // exact
             path="/admin"

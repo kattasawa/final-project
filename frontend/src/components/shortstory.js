@@ -11,7 +11,7 @@ export default class Shortstory extends React.Component {
         <div className="shortstory-image-container">
           <img id="shortstory-image" src={this.props.image} alt="" />
         </div>
-        <p className="caption">{this.props.caption}</p>
+        {/* <p className="caption">{this.props.caption}</p> */}
         <div className="shortstory-text-container">
           <h2 className="heading">{this.props.heading}</h2>
           <div className="shorttext"><ReactMarkdown source={this.props.shortText} /></div>

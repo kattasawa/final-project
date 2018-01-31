@@ -13,7 +13,7 @@ export default class Storypage extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8080/adminstory").then(response => {
+    fetch("https://admin-story-api.herokuapp.com/adminstory").then(response => {
       return response.json()
     }).then(json => {
       console.log(json)

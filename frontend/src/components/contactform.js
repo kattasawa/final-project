@@ -39,7 +39,7 @@ getMessagereply = () => {
 
 handleSubmit = event => {
   event.preventDefault()
-  fetch("http://localhost:8080/contactform", {
+  fetch("https://admin-story-api.herokuapp.com/contactform", {
     method: "POST",
     headers: {
       Accept: "application/json, text/plain, */*",
@@ -58,24 +58,28 @@ handleSubmit = event => {
 
 render() {
   return (
-    <div className="contactform-container">
-      <form onSubmit={this.handleSubmit}>
-        <div className="two-in-a-row">
-          <div className="first">
-            <input type="text" required placeholder="Namn" value={this.state.name} onChange={this.handleName} />
+    <div className="contactform-page">
+      <h1>Kontakta oss</h1>
+      <div className="underline" />
+      <div className="contactform-container">
+        <form onSubmit={this.handleSubmit}>
+          <div className="two-in-a-row">
+            <div className="first">
+              <input type="text" required placeholder="Namn" value={this.state.name} onChange={this.handleName} />
+            </div>
+            <div className="second">
+              <input type="email" required placeholder="Email" value={this.state.email} onChange={this.handleEmail} />
+            </div>
           </div>
-          <div className="second">
-            <input type="email" required placeholder="Email" value={this.state.email} onChange={this.handleEmail} />
+          <textarea type="text" required placeholder="Meddelande" value={this.state.message} onChange={this.handleMessage} />
+          <div className="message">
+            {this.getMessagereply()}
           </div>
-        </div>
-        <textarea type="text" required placeholder="Meddelande" value={this.state.message} onChange={this.handleMessage} />
-        <div className="message">
-          {this.getMessagereply()}
-        </div>
-        <div className="skicka-btn-flex">
-          <button id="skicka-btn">Skicka</button>
-        </div>
-      </form>
+          <div className="skicka-btn-flex">
+            <button id="skicka-btn">Skicka</button>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }

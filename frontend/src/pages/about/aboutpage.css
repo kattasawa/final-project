@@ -4,15 +4,17 @@
   height: 100%;
 }
 
-h1 {
+.about-page h1 {
   font-weight: 100;
   text-transform: uppercase;
   color: #fff;
+  padding: 0 20%;
 }
 
 .underline {
   width: 7%;
   margin-top: -27px;
+  margin-left: 20%;
   border: 0.7px solid #fff;
 }
 
@@ -38,17 +40,24 @@ h1 {
   padding: 5% 20%;
 }
 
+.featureList li:before {
+  position: absolute;
+  margin-left: -1.3em;
+  font-weight: 100;
+}
+
 .featureList li {
+  font-weight: 200;
   color: #fff;
   text-decoration: none;
 }
 
-.featureList li:hover, a:hover {
+/* .featureList li:hover, a:hover {
   font-weight: 100;
   font-size: 1.2em;
   color: #fff;
   text-decoration: none;
-}
+} */
 
 .featureList li.tick:before {
   content: "\2713";

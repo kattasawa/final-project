@@ -1,9 +1,23 @@
+.contactform-page h1 {
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.underline {
+  width: 7%;
+  margin-top: -27px;
+  border: 0.7px solid #fff;
+}
+
 .contactform-container {
   background-color: #3b494a;
   display: flex;
   flex-direction: column;
   padding: 5% 20%;
 }
+
+
 
 .two-in-a-row {
   display: flex;
@@ -33,7 +47,7 @@
 }
 
 #skicka-btn {
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 400;
   background-color: #3b494a;
   border: 1.5px solid #fff;

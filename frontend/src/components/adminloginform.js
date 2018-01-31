@@ -27,7 +27,7 @@ export default class AdminLoginForm extends React.Component {
       body: JSON.stringify(this.state)
     }
 
-    fetch("http://localhost:8080/adminlogin", payload)
+    fetch("https://admin-story-api.herokuapp.com/adminlogin", payload)
       .then(response => response.json())
       .then(json => {
         if (json.errors) {
