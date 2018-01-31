@@ -19,11 +19,13 @@
 }
 
 .first-text h2 {
+  font-weight: 200;
   color: #fff;
   text-align: center;
 }
 
 .first-text h4 {
+  font-weight: 200;
   color: #fff;
   font-size: 1.2em;
   text-transform: uppercase;
