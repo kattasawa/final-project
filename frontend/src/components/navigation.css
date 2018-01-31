@@ -15,8 +15,9 @@
 .menu-list li {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
-  font-size: 1.1em;
+  font-size: 1.3em;
   text-transform: uppercase;
+  margin-right: 38px;
 }
 
 .menu-list li:hover, a:hover {
