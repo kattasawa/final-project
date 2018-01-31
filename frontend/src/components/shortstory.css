@@ -5,9 +5,7 @@
 }
 
 .shortstory-container {
-
   min-width: 100%;
-
   display: flex;
   border: 0.7px solid black;
 }
