@@ -47,11 +47,11 @@ footer .underline {
 .icons img {
   width: auto;
   max-height: 3vh;
-  margin-top: 1vw;
+  margin-top: 0.6vw;
 }
 
 #insta {
-  margin-left: 1vw;
+  margin-left: 0.6vw;
 }
 
 .icons {
@@ -63,4 +63,5 @@ footer .underline {
 .flex-admin-copy {
   padding-top: 10vh;
   margin-right: 2vw;
+  text-align: right;
 }

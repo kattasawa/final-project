@@ -18,7 +18,9 @@ export default class Footer extends React.Component {
             070-291 96 12
             <div className="icons">
               <img src="/images/facebook-icon.png" alt="facebook-icon" />
+              {/* <Link to="https://www.instagram.com/stottamamma/" target="_blank"> */}
               <img id="insta" src="/images/instagram-icon.png" alt="insta-icon" />
+              {/* </Link> */}
             </div>
           </div>
 

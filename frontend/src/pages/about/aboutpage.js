@@ -22,7 +22,7 @@ Att stötta en mamma som föder är att lägga grunden för en tryggare familj.<
 
 
 
-——Boka kostnadsfri konsultation!—-<br />
+<br />
 
 Vad vi erbjuder och kostnad:<br />
 

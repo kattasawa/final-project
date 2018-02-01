@@ -9,6 +9,7 @@ export default class Longstory extends React.Component {
     return (
       <div className="longstory-page">
         <div className="longstory-container">
+          <div id="underline-longstory" className="underline" />
           <img id="longstory-image" src={this.props.image} alt="" />
           <p className="caption">{this.props.caption}</p>
           <h2 className="heading">{this.props.heading}</h2>

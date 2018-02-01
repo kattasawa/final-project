@@ -24,5 +24,22 @@
 }
 
 .longtext {
-  
+
+}
+
+
+@media (max-width: 620px) {
+  .longstory-container {
+    width: 100%;
+    padding: 2% 8%;
+    margin-top: 8vh;
+  }
+}
+
+@media (min-width: 620px) and (max-width: 900px) {
+  .longstory-container {
+    width: 100%;
+    padding: 4% 12%;
+    margin-top: 10vh;
+  }
 }
