@@ -47,12 +47,8 @@ class App extends React.Component {
         <div>
           <Navigation />
           <Route exact path="/" component={Hero} />
-
-
-          {/* <div className="app-wrapper"> */}
           <Route exact path="/" component={Startpage} />
           <Route exact path="/" component={Grid} />
-          <Footer />
           <Route
             // exact
             path="/admin"
@@ -65,11 +61,8 @@ class App extends React.Component {
           <Route exact path="/story" component={Storypage} />
           <Route exact path="/about" component={Aboutpage} />
           <Route exact path="/login" component={AdminLoginPage} />
-
-            {/* <Footer /> */}
+          <Footer />
         </div>
-        {/* </div> */}
-
       </BrowserRouter>
     )
   }
