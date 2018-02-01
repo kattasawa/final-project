@@ -66,6 +66,12 @@ app.get("/adminstory/latest", (req, res) => {
   })
 })
 
+app.delete("/adminstory/:id", (req, res) => {
+  AdminInput.findOneAndRemove({ _id: req.params.id })
+    .then(() => { res.status(201).send("Story deleted in MongoDB") })
+    .catch(err => { res.status(400).send(err) })
+})
+
 const ContactInput = mongoose.model("ContactInput", {
   date: {
     type: Date,

@@ -19,6 +19,7 @@ export default class Adminpage extends React.Component {
     }
   }
 
+//login to admin if correct password else push to login
 componentDidMount() {
     const accessToken = localStorage.getItem("accessToken")
     const userId = localStorage.getItem("userId")

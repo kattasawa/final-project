@@ -16,17 +16,17 @@ export default class Storypage extends React.Component {
     fetch("https://admin-story-api.herokuapp.com/adminstory").then(response => {
       return response.json()
     }).then(json => {
+      const reversedJson = json.reverse()
       console.log(json)
-      this.setState({
-        storiesList: json
-      })
+      this.setState({ storiesList: reversedJson })
     })
   }
 
   render() {
+    const storiesListToRender = this.state.storiesList
     return (
       <div className="stories-list">
-        {this.state.storiesList.map(story => {
+        {storiesListToRender.map(story => {
           return <Longstory
             key={story._id}
             id={story._id}
