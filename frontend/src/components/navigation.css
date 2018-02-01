@@ -2,8 +2,18 @@
   height: 200px;
 }
 
-#hamburger {
-  display: none;
+nav li {
+  display: inline;
+}
+
+nav li a {
+  margin-right: 10px;
+  color: inherit;
+}
+
+.flex-menu {
+  display: flex;
+  justify-content: flex-end
 }
 
 .logo img {
@@ -12,17 +22,26 @@
   left: 47%;
 }
 
-.menu-list li {
+.desktop-menu li {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
-  font-size: 1.3em;
+  font-size: 1em;
   text-transform: uppercase;
   margin-right: 38px;
+
 }
 
-.menu-list li:hover, a:hover {
+.desktop-menu li:hover, a:hover {
   color: black;
   text-decoration: line-through;
+}
+
+.menu-list {
+  display: none;
+}
+
+#hamburger {
+  display: none;
 }
 
 
@@ -35,13 +54,16 @@
     height: 80px;
   }
 
+  .desktop-menu {
+    display: none;
+  }
+
   .logo img {
     width: 68px;
     height: 68px;
     z-index: 10;
-    position: relative;
-    margin-top: 14%;
-    margin-right: 153px;
+    position: absolute;
+    top: 15px;
   }
 
   .menu-list {

@@ -22,6 +22,13 @@ export default class Navigation extends React.Component {
           </Link>
         </div>
 
+<div className="flex-menu">
+        <ul className="desktop-menu">
+          <li><Link to="/story">Story</Link></li>
+          <li><Link to="/about">Om oss</Link></li>
+        </ul>
+</div>
+
         <div className="menu">
           <ul className="menu-list">
             <li><Link to="/story">Story</Link></li>

@@ -33,4 +33,8 @@
         flex: 100%;
         max-width: 100%;
     }
+    .grid-container {
+      width: 100%;
+      padding: 5% 12%;
+    }
 }
