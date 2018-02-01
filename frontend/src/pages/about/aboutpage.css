@@ -2,6 +2,7 @@
   background-color: #3b494a;
   width: 100%;
   height: 100%;
+  padding-top: 120px;
 }
 
 .about-page h1 {
@@ -50,19 +51,30 @@
 
 .featureList li {
   font-weight: 200;
+  text-align: center;
   color: #fff;
   text-decoration: none;
 }
-
-/* .featureList li:hover, a:hover {
-  font-weight: 100;
-  font-size: 1.2em;
-  color: #fff;
-  text-decoration: none;
-} */
 
 .featureList li.tick:before {
   content: "\2713";
   color: #fff;
   text-transform: none;
+}
+
+hr {
+  width: 80%;
+  color: #fff;
+}
+
+@media (max-width: 620px) {
+  .first-text {
+    padding: 2% 8%;
+  }
+}
+
+@media (min-width: 620px) and (max-width: 900px) {
+  .first-text {
+    padding: 4% 12%;
+  }
 }

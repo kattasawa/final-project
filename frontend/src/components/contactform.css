@@ -4,6 +4,29 @@
   color: #fff;
 }
 
+.contactform-page input {
+  border: 1px solid #fff;
+  background-color: #3b494a;
+  color: #fff;
+  margin: 0;
+}
+
+.contactform-page textarea {
+  border: 1px solid #fff;
+  background-color: #3b494a;
+  color: #fff;
+}
+/* <style>
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #3CBC8D;
+    color: white;
+} */
+
 .underline {
   width: 7%;
   margin-top: -27px;
@@ -26,18 +49,20 @@
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #3b494a;
+  color: #fff;
+  font-weight: 200;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: #3b494a;
+  color: #fff;
+  font-weight: 200;
 }
 
 .first {
-  width: 48%;
+  width: 49.2%;
 }
 
 .second {
-  width: 48%;
+  width: 49.2%;
 }
 
 .skicka-btn-flex {
@@ -52,4 +77,22 @@
   background-color: #3b494a;
   border: 1.5px solid #fff;
   color: #fff;
+}
+
+@media (max-width: 620px) {
+  .contactform-container {
+    padding: 2% 8%;
+  }
+  .about-page h1 {
+    padding-left: 8%;
+  }
+}
+
+@media (min-width: 620px) and (max-width: 900px) {
+  .contactform-container {
+    padding: 4% 12%;
+  }
+  .about-page h1 {
+    padding-left: 12%;
+  }
 }

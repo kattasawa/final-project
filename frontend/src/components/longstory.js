@@ -8,6 +8,7 @@ export default class Longstory extends React.Component {
   render() {
     return (
       <div className="longstory-page">
+        <hr />
         <div className="longstory-container">
           <div id="underline-longstory" className="underline" />
           <img id="longstory-image" src={this.props.image} alt="" />
@@ -15,7 +16,7 @@ export default class Longstory extends React.Component {
           <h2 className="heading">{this.props.heading}</h2>
           <div className="longtext"><ReactMarkdown source={this.props.longText} /></div>
         </div>
-        <hr />
+
       </div>
     )
   }
