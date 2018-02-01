@@ -1,6 +1,7 @@
 import React from "react"
 
 import Longstory from "components/longstory"
+//import Delete from "components/deletestory"
 import "./style.css"
 
 export default class Storypage extends React.Component {
@@ -35,6 +36,7 @@ export default class Storypage extends React.Component {
             image={story.image}
             caption={story.caption} />
         })}
+        {/* <Delete /> */}
       </div>
     )
   }

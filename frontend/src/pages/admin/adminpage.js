@@ -89,7 +89,7 @@ handleSubmit = event => {
 }
 
 handleDeleteClick = id => {
-  fetch(`http://localhost:8080/contactform/${id}`, {
+  fetch(`https://admin-story-api.herokuapp.com/contactform/${id}`, {
     method: "DELETE",
     headers: {
       Accept: "application/json, text/plain, */*",

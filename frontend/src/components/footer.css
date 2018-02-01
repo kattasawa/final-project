@@ -11,20 +11,56 @@ footer a {
 
 .footer-container {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
+  /* justify-content: flex-end; */
 }
 
-.copyright span i {
+footer ul li {
+  font-size: 0.8;
   font-weight: 200;
   color: #fff;
 }
 
-.fa-copyright {
+h5 {
+  font-weight: 200;
+  font-size: 1.1em;
+  text-transform: uppercase;
   color: #fff;
-  margin-left: 4px;
 }
 
-.flex-row {
+footer .underline {
+  width: 16%;
+  margin-left: 0vw;
+  border: 0.7px solid #fff;
+}
+
+.contacts {
+  font-weight: 200;
+  font-size: 0.9em;
+  color: #fff;
+  margin-left: 2vw;
+  padding-top: 1vh;
+}
+
+.icons img {
+  width: auto;
+  max-height: 3vh;
+  margin-top: 1vw;
+}
+
+#insta {
+  margin-left: 1vw;
+}
+
+.icons {
+  display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-admin-copy {
+  padding-top: 10vh;
+  margin-right: 2vw;
 }

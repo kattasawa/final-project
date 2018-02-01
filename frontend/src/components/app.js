@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter, Route } from "react-router-dom"
+import { HashRouter, Route } from "react-router-dom"
 
 import Adminpage from "pages/admin/adminpage"
 import Storypage from "pages/story/storypage"
@@ -43,7 +43,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div>
           <Navigation />
           <Route exact path="/" component={Hero} />
@@ -63,7 +63,7 @@ class App extends React.Component {
           <Route exact path="/login" component={AdminLoginPage} />
           <Footer />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 }
