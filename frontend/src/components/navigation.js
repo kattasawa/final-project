@@ -31,8 +31,8 @@ export default class Navigation extends React.Component {
 
         <div className="menu">
           <ul className="menu-list">
-            <li><Link to="/story">Story</Link></li>
-            <li><Link to="/about">Om oss</Link></li>
+            <li><Link to="/story" onClick={() => this.collapse("hamburger-checkbox:checked", "menu")}>Story</Link></li>
+            <li><Link to="/about" onClick={() => this.collapse("hamburger-checkbox:checked", "menu")}>Om oss</Link></li>
           </ul>
         </div>
       </nav>
