@@ -16,10 +16,21 @@ nav li a {
   justify-content: flex-end
 }
 
-.logo img {
+/* .logo img {
   position: absolute;
+  width: 100px;
+  height: 100px;
   top: 8%;
   left: 47%;
+} */
+
+.logo img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .desktop-menu li {
@@ -61,10 +72,6 @@ nav li a {
   .logo img {
     width: 68px;
     height: 68px;
-    z-index: 10;
-    position: absolute;
-    top: 15px;
-    left: 284px;
   }
 
   .menu-list {
