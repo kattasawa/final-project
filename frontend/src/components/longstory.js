@@ -16,7 +16,6 @@ export default class Longstory extends React.Component {
           <h2 className="heading">{this.props.heading}</h2>
           <div className="longtext"><ReactMarkdown source={this.props.longText} /></div>
         </div>
-
       </div>
     )
   }

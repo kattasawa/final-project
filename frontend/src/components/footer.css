@@ -65,3 +65,21 @@ footer .underline {
   margin-right: 2vw;
   text-align: right;
 }
+
+@media (max-width: 620px) {
+  .flex-admin-copy {
+    padding-top: 6vh;
+  }
+  .contacts {
+    padding-top: 0.6vh;
+  }
+}
+
+@media (min-width: 620px) and (max-width: 900px) {
+  .flex-admin-copy {
+    padding-top: 6vh;
+  }
+  .contacts {
+    padding-top: 0.7vh;
+  }
+}
