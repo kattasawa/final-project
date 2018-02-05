@@ -42,7 +42,7 @@ nav li a {
 
 }
 
-.desktop-menu li:hover, a:hover {
+.Header a:hover {
   color: black;
   text-decoration: line-through;
 }
