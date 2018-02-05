@@ -1,1 +1,15 @@
+.stories-list {
+  margin-top: 3vh;
+}
 
+@media (max-width: 620px) {
+  .stories-list {
+    margin-top: 9vh;
+  }
+}
+
+@media (min-width: 620px) and (max-width: 900px) {
+  .stories-list {
+    margin-top: 10vh;
+  }
+}

@@ -1,19 +1,17 @@
-/* nav {
-  width: 100vw;
-  height: 75px;
-  display: flex;
-  justify-content: space-between;
+.intro-text p {
+  text-align: center;
+  font-weight: 200;
+  padding: 0 20% 5% 20%;
 }
 
-nav li {
-  display: inline;
+@media (max-width: 620px) {
+  .intro-text p {
+    padding: 0 12% 3% 12%;
+  }
 }
 
-nav a {
-  font-size: 1em;
+@media (min-width: 620px) and (max-width: 900px) {
+  .intro-text p {
+    padding: 0 12% 3% 12%;
+  }
 }
-
-nav li a {
-  margin-right: 25px;
-  color: inherit;
-} */

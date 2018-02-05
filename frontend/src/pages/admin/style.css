@@ -2,7 +2,7 @@
   width: 100vw;
   min-height: 100vh;
   padding: 5% 20% 15% 20%;
-  background-color: #777;
+  background-color: #3b494a;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +21,7 @@
 
 .caption p {
   font-weight: 200i;
-  font-size: 
+  font-size:
 }
 
 .form-container {
@@ -64,8 +64,8 @@
   padding: 1em;
   margin: 0.7em 0 4em 0;
   box-shadow: 5px 5px;
-  background-color: #2d6c33;
-  border: 3px solid #2d6c33;
+  background-color: #3b494a;
+  border: 3px solid #3b494a;
   font-weight: 600;
   font-size: 1.5em;
   line-height: 2.5em;
@@ -76,11 +76,23 @@
 }
 
 .form-container-green a:hover {
-  color: #2d6c33;
+  color: #3b494a;
 }
 
 .form-container-green:hover {
-  color: #2d6c33;
+  color: #3b494a;
   background-color: #fff;
   box-shadow: 5px 5px #000;
+}
+
+@media (max-width: 620px) {
+  .Admin {
+    margin-top: 9vh;
+  }
+}
+
+@media (min-width: 620px) and (max-width: 900px) {
+  .Admin {
+    margin-top: 10vh;
+  }
 }

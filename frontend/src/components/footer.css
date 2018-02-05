@@ -66,6 +66,11 @@ footer .underline {
   text-align: right;
 }
 
+.flex-admin-copy li:hover, a:hover {
+  color: #fff;
+  text-decoration: line-through;
+}
+
 @media (max-width: 620px) {
   .flex-admin-copy {
     padding-top: 6vh;
